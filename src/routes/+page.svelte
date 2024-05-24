@@ -1,5 +1,7 @@
-<script> 
-import PocketBase from 'pocketbase'
+<script>
+// @ts-nocheck
+ 
+import db from '../lib/db'
 
 import { onMount } from 'svelte';
 let mesg="",error_mesg=""
@@ -19,9 +21,8 @@ onMount(() => {
 	console.log("****")
 })
 const handleSubmit= async()=>{
-   
-        try{
-            const record1 = await pb.collection('Record').create(formDt);
+           try{
+            const record1 = await db.collection('Record').create(formDt);
             console.log(record1)
 
             mesg="Successfully Inserted"
