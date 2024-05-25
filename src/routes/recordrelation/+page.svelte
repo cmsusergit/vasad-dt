@@ -18,7 +18,7 @@
 </script>
 <svelte:head>
         <title>Home</title>
-        <meta name="description" content="Svelte demo app" />
+        <meta name="description" content="Vasad-Dt" />
 </svelte:head>
 <section>
     {#if mesg}
