@@ -69,7 +69,7 @@
                             <span>પોતે/SELF</span>
                         </label>
                         <label for="relation" class="block my-2 text-lg font-medium text-gray-800 dark:text-white">સંબંધ/Relation</label>
-                        <input on:blur={onRelationChange} bind:value={relativeDt.relation} type="text" name="relation" id="relation" class="bg-gray-50 border border-gray-400 text-gray-800 text-lg rounded-lg focus:rind-primary-700 focus:border-primary-700 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 disabled:bg-gray-500" placeholder="સંબંધ/Relation" disabled={selfRelated} >
+                        <input bind:value={relativeDt.relation} type="text" name="relation" id="relation" class="bg-gray-50 border border-gray-400 text-gray-800 text-lg rounded-lg focus:rind-primary-700 focus:border-primary-700 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 disabled:bg-gray-500" placeholder="સંબંધ/Relation" disabled={selfRelated} >
                     </div>
                     <div class="sm:col-span-2">
                         <label for="dob" class="block my-2 text-lg font-medium text-gray-800 dark:text-white">જન્મતારીખ/Birth Date</label>
