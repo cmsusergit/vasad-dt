@@ -1,16 +1,29 @@
 <script>
+	import db from '$lib/db'
+	import { onMount } from 'svelte';
 	import Header from './Header.svelte';
+	import {page} from '$app/stores'
 	import './styles.css';
-</script>
+	let isLoggedIn=false
+	onMount(()=>{
+		db.authStore.onChange(()=>{
+			isLoggedIn=db.authStore.isValid
+		})
 
+
+	})
+</script>
 <div class="app">
 	<Header />
-
 	<main>
-		<slot />
+
+		<slot/>
+		<!-- {#if isLoggedIn || $page.route.id?.includes('login')}
+			<slot />
+		{:else}		
+			<h1 class="text-4xl p-4 text-center font-bold">You Are Nt LoggedIn, Please, Login To Proceed</h1>
+		{/if} -->
 	</main>
-
-
 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 	</footer>

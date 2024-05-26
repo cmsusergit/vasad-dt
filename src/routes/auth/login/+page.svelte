@@ -1,7 +1,7 @@
 <script>
-	import { goto } from '$app/navigation';
-
 // @ts-nocheck
+
+	import { goto } from '$app/navigation';
     import db from '../../../lib/db'    
     import Spinner from '../../../lib/spinner.svelte'
     let error_mesg,authDt
@@ -11,8 +11,8 @@
         try {
             authDt = await db.collection('users').authWithPassword(user.email,user.password)
 
-            goto("/")
             error_mesg=''
+            goto("/")
         } catch (error) {
             console.log(error);
             error_mesg=error.message+" User Email or Password Incorrect"
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="border my-4 w-full border-slate-800"></div>
-                <button type="submit" class="w-full text-center px-5 py-2.5 mt-4 sm:mt-6 text-lg font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-800 bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400" disabled={loading}>
+                <button type="submit" class="w-full px-5 py-2.5 mt-4 sm:mt-6 text-lg font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-800 bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400" disabled={loading}>
                     Login
                 </button>   
             </form>
