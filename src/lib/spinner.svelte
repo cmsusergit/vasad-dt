@@ -8,4 +8,4 @@
         </svg>
     </div>
     <div class="text-2xl text-center">Loading ...</div>
-</div>
+</div> 

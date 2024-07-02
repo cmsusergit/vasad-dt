@@ -7,6 +7,7 @@
 	let isLoggedIn=false
 	onMount(()=>{
 		db.authStore.onChange(()=>{
+			console.log('----',db);
 			isLoggedIn=db.authStore.isValid
 		})
 
@@ -17,12 +18,11 @@
 	<Header />
 	<main>
 
-		<slot/>
-		<!-- {#if isLoggedIn || $page.route.id?.includes('login')}
+		{#if isLoggedIn || $page.route.id?.includes('login')}
 			<slot />
 		{:else}		
 			<h1 class="text-4xl p-4 text-center font-bold">You Are Nt LoggedIn, Please, Login To Proceed</h1>
-		{/if} -->
+		{/if}
 	</main>
 	<footer>
 		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>

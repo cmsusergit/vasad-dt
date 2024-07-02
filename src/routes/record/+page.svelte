@@ -72,9 +72,10 @@
     <section class="bg-white dark:bg-gray-800 w-full">
         <div class="py-8 px-4 mx-auto w-full lg:py-12">
             <h2 class="mb-4 text-xl font-bold text-gray-800 dark:text-white">Add New Record</h2>
-            {#if formDt?.id}                    
+            {#if formDt?.id}    
+            
                 <div class="w-full flex justify-end p-2">                        
-                    <a href={`/recordrelation?record_id=${formDt.id}`} class="bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-500">ADD RELATIVE</a>
+                    <a href={`/addrecordrelation?record_id=${formDt.id}`} class="bg-slate-700 text-white px-4 py-2 rounded-lg hover:bg-slate-500">ADD RELATIVE</a>
                 </div>
             {/if}
             <form on:submit={handleSubmit}>
@@ -130,13 +131,6 @@
                     {/if}                    
                     <div class="border my-4 w-full border-slate-800"></div>
                 </div>
-
-
-
-
-
-
-
                 <button type="submit" class="w-full text-center px-5 py-2.5 mt-4 sm:mt-6 text-lg font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-800 bg-blue-500 hover:bg-blue-700 disabled:bg-gray-400" disabled={loading}>
                     સબમિટ/SUBMIT
                 </button>
@@ -144,7 +138,6 @@
         </div>
     </section>      
 </section>
-    
     
 <style>
     section {
